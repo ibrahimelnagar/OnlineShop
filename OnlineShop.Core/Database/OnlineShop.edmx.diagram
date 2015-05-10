@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bc4c367d02954b9586074d060e44836e" Name="Diagram1">
+        <EntityTypeShape EntityType="OnlineShopModel.Album" Width="1.5" PointX="3" PointY="3.125" />
+        <EntityTypeShape EntityType="OnlineShopModel.Artist" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="OnlineShopModel.AspNetRole" Width="1.5" PointX="7.75" PointY="3.375" />
+        <EntityTypeShape EntityType="OnlineShopModel.AspNetUserClaim" Width="1.5" PointX="12.25" PointY="2" />
+        <EntityTypeShape EntityType="OnlineShopModel.AspNetUserLogin" Width="1.5" PointX="12.25" PointY="4.75" />
+        <EntityTypeShape EntityType="OnlineShopModel.AspNetUser" Width="1.5" PointX="10" PointY="2.25" />
+        <EntityTypeShape EntityType="OnlineShopModel.Cart" Width="1.5" PointX="5.25" PointY="6.625" />
+        <EntityTypeShape EntityType="OnlineShopModel.Genre" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OnlineShopModel.Order" Width="1.5" PointX="3" PointY="7.875" />
+        <EntityTypeShape EntityType="OnlineShopModel.OrderDetail" Width="1.5" PointX="5.25" PointY="3.5" />
+        <AssociationConnector Association="OnlineShopModel.FK_Album_Artist" />
+        <AssociationConnector Association="OnlineShopModel.FK_Album_Genre" />
+        <AssociationConnector Association="OnlineShopModel.FK_Cart_Album" />
+        <AssociationConnector Association="OnlineShopModel.FK_OrderDetail_Album" />
+        <AssociationConnector Association="OnlineShopModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="OnlineShopModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="OnlineShopModel.FK_OrderDetail_Order" />
+        <AssociationConnector Association="OnlineShopModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

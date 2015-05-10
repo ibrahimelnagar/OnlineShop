@@ -1,0 +1,7 @@
+﻿
+@{
+    string text = string.Format("Cart ({0})", ViewBag.CartCount);
+}
+
+
+@Html.ActionLink(text, "Index", "ShoppingCart", new { id = "cart-status" })
