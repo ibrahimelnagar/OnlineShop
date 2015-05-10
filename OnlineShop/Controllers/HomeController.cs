@@ -8,7 +8,6 @@ namespace OnlineShop.Controllers
     public class HomeController : Controller
     {
         private readonly IDatabaseHelper _databaseHelper;
-        private readonly string ble = "sdas";
 
         private static int TopSellingAlbumsAmount
         {
