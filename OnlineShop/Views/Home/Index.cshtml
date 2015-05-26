@@ -6,14 +6,15 @@
 
 <div id="promotion"></div>
 <h3><em>Fresh</em> off the grill</h3>
-<ul id="album-list">
-    @foreach (var album in Model)
-    {
-        <li>
-            <a href="@Url.Action("Details", "Store", new { id = album.Id })">
-                <img alt="@album.Title" src="@album.AlbumArtUrl" />
-                <span>@album.Title</span>
+<div id="main" ng-controller="HomeCtrl">
+    <ul id="album-list">
+        <li ng-repeat="album in albums.albums">
+            <a ng-href="@Url.Action("Details", "Store")/{{album.id}}">
+                <img alt="{{album.title}}" src="{{album.albumArtUrl}}" />
+                <span>{{album.title}}</span>
             </a>
         </li>
-    }
-</ul>
+    </ul>
+</div>
+
+<script src="~/Content/js/home-controller.js"></script>

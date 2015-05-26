@@ -1,6 +1,8 @@
 ﻿using System.Configuration;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 using OnlineShop.Core.Interfaces;
 
 namespace OnlineShop.Controllers
@@ -19,9 +21,20 @@ namespace OnlineShop.Controllers
             _databaseHelper = databaseHelper;
         }
 
-        public async Task<ActionResult> Index()
+        [HttpGet]
+        public ActionResult Index()
         {
-            return View(await _databaseHelper.GetTopSellingAlbumsAsync(TopSellingAlbumsAmount));
+            return View();
         }
+
+        [HttpPost]
+        public async Task<JsonResult> GetTopSellingAlbumsAsync()
+        {
+            var topSellingAlbums = await _databaseHelper.GetTopSellingAlbumsAsync(TopSellingAlbumsAmount);
+
+            var albums = topSellingAlbums.Select(x => new {id = x.Id, title = x.Title, albumArtUrl = x.AlbumArtUrl});
+
+            return Json(new { albums = albums });
+        } 
     }
 }

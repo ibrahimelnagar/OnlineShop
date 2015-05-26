@@ -1,11 +1,20 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="shopApp">
 <head>
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-animate.min.js"></script>
+    <script src="~/Scripts/angular-cookies.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script src="~/Scripts/angular-sanitize.min.js"></script>
+    <script src="~/Scripts/angular-touch.min.js"></script>
+
     @RenderSection("scripts", required: false)
 </head>
 <body>
@@ -33,7 +42,7 @@
         @RenderBody()
     </div>
     <div id="footer">
-        built with <a href="http://asp.net/mvc">ASP.NET MVC 4</a>
+        built with <a href="http://asp.net/mvc">ASP.NET MVC 4.5.1</a>
     </div>
 </body>
 </html>
